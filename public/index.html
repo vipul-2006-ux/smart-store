@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartStore | Premium E-Commerce</title>
+  <meta name="description" content="Discover premium products at SmartStore. Next-generation shopping experience.">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="glass-nav">
+    <div class="nav-container">
+      <div class="logo">Smart<span>Store</span></div>
+      <ul class="nav-links">
+        <li><a href="#" class="active" id="navShop">Shop</a></li>
+        <li><a href="#" id="navCategories">Categories</a></li>
+        <li id="navAdminContainer" style="display: none;"><a href="/admin.html" id="navAdmin">Admin Dashboard</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="loginBtn" class="btn-outline">Login</button>
+        <button id="cartBtn" class="btn-primary">Cart (0)</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1 class="fade-in-up">Next Generation<br><span class="gradient-text">Shopping Experience</span></h1>
+      <p class="fade-in-up delay-1">Explore our curated collection of premium electronics, designed to elevate your everyday lifestyle with seamless technology.</p>
+      <button class="btn-primary fade-in-up delay-2" id="exploreBtn">Explore Products</button>
+    </div>
+    <div class="hero-glow"></div>
+  </header>
+
+  <!-- Categories Section -->
+  <section class="products-section" style="padding-bottom: 2rem;">
+    <div class="section-header">
+      <h2>Browse Categories</h2>
+    </div>
+    <div class="products-grid" id="categoriesGrid" style="grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));">
+      <div class="skeleton-card" style="height: 100px;"></div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="products-section" id="products" style="padding-top: 2rem;">
+    <div class="section-header">
+      <h2>Featured Products</h2>
+      <p>Hand-picked premium electronics for you.</p>
+    </div>
+    <div class="products-grid" id="productsGrid">
+      <!-- Products will be loaded here dynamically -->
+      <div class="skeleton-card"></div>
+      <div class="skeleton-card"></div>
+      <div class="skeleton-card"></div>
+    </div>
+  </section>
+
+  <!-- Login Modal -->
+  <div class="modal" id="loginModal">
+    <div class="modal-content glass-card">
+      <button class="close-btn" id="closeLogin">&times;</button>
+      <h2>Welcome Back</h2>
+      <p>Log in to access your account</p>
+      <form id="loginForm">
+        <div class="input-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" required placeholder="vipul_1005">
+        </div>
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" required placeholder="••••••••">
+        </div>
+        <button type="submit" class="btn-primary full-width">Sign In</button>
+      </form>
+      <div id="loginError" class="error-msg"></div>
+    </div>
+  </div>
+
+  <!-- Checkout Modal -->
+  <div class="modal" id="checkoutModal">
+    <div class="modal-content glass-card">
+      <button class="close-btn" id="closeCheckout">&times;</button>
+      <h2>Checkout</h2>
+      <p>Review and confirm your order.</p>
+      <div id="checkoutItems" style="margin-bottom: 1rem; color: var(--text-secondary);">
+        <!-- Items listed here -->
+      </div>
+      <h3 id="checkoutTotal" style="margin-bottom: 1.5rem; color: var(--accent-primary);">Total: $0.00</h3>
+      <button id="confirmOrderBtn" class="btn-primary full-width">Place Order (Confirm via Email)</button>
+      <div id="checkoutMessage" class="error-msg" style="color: var(--success); margin-top: 1rem;"></div>
+    </div>
+  </div>
+
+  <script src="/js/app.js?v=5"></script>
+</body>
+</html>

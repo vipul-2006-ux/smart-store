@@ -1,0 +1,1 @@
+INSERT INTO users (name, email, password, role) VALUES ('Admin', 'admin@store.com', 'hashedpassword', 'ADMIN');
