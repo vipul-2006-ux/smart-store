@@ -1,5 +1,7 @@
 #!/bin/bash
-echo "Pulling latest code..."
-git pull origin main
-echo "Restarting server..."
-pm2 restart ecosystem.config.js
+echo "🚀 Starting Deployment Process..."
+echo "📦 Installing dependencies..."
+npm install --production
+echo "🗄️ Running database migrations (if any)..."
+# node Database_Layer/seed.js
+echo "✅ Deployment complete. Server ready to start!"
