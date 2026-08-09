@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const rateLimit = require('express-rate-limit');
 
-const gatewayAuth = require('../../Backend_Application/Middleware/auth.middleware');
+const gatewayAuth = require('../../Security_Layer/authProtection');
 const Order = require('../../Backend_Application/Models/Order');
 const authController = require('../../Backend_Application/Controllers/auth.controller');
 const { loginLimiter } = require('../rateLimiter');
