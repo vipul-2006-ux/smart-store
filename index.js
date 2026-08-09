@@ -13,4 +13,8 @@ sequelize.sync().then(() => {
   });
 }).catch(err => {
   console.error('Failed to sync database:', err);
+  // Start server anyway so Render doesn't crash on boot if DB isn't ready
+  app.listen(port, () => {
+    console.log(`SmartStore API running on port ${port} (DB connection failed)`);
+  });
 });
