@@ -3,11 +3,11 @@
 -- ==========================================
 
 -- 1. Seed Admin and Test Users
--- Note: Passwords should be bcrypt hashes in production!
+-- The passwords below are hashed versions of 'vip2000'
 INSERT INTO users (username, email, password, role) VALUES 
-('admin_user', 'admin@smartstore.com', '$2b$10$abcdefghijklmnopqrstuv', 'ADMIN'),
-('vipul_1005', 'vipul@example.com', '$2b$10$abcdefghijklmnopqrstuv', 'USER'),
-('john_doe', 'john@example.com', '$2b$10$abcdefghijklmnopqrstuv', 'USER');
+('admin_user', 'admin@smartstore.com', '$2b$10$67Tab0dNHUwSkYop8dgbGeCS5/rPsE8NTWW9bbDEpcnU2pEzbm8Iu', 'ADMIN'),
+('vipul_1005', 'vipul@example.com', '$2b$10$67Tab0dNHUwSkYop8dgbGeCS5/rPsE8NTWW9bbDEpcnU2pEzbm8Iu', 'USER'),
+('john_doe', 'john@example.com', '$2b$10$67Tab0dNHUwSkYop8dgbGeCS5/rPsE8NTWW9bbDEpcnU2pEzbm8Iu', 'USER');
 
 -- 2. Seed Product Inventory
 INSERT INTO products (name, description, price, category, stock_quantity) VALUES 
